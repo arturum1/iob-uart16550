@@ -16,8 +16,8 @@ def setup(py_params_dict):
     attributes_dict = {
         "name": NAME,
         "generate_hw": True,
-        "description": "IObundle's adaptation of the UART16550 from https://opencores.org/projects/uart16550.",
-        "version": "0.1",
+        "description": "IObundle's adaptation of the UART16550 from: https://opencores.org/projects/uart16550. The original sources for this core and public key signature are available at: https://github.com/IObundle/iob-uart16550.",
+        "version": "0.1.4",
         "board_list": ["iob_aes_ku040_db_g"],
         #
         # Confs
