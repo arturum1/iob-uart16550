@@ -22,12 +22,21 @@ The main commands to use the Py2HWSW workflow are:
 An example of cleaning a previous build, creating a new build and simulating the project is:
 - `make clean && make setup && make -C ../iob_uart16550_V0.10 sim-run`
 
-## Pre-built files
+## FuseSoC
 
-A [FuseSoC](https://github.com/olofk/fusesoc)-compatible pre-built version of IOb-uart16550 is available in the [repository's release page](https://github.com/IObundle/iob-uart16550/releases).
+A [FuseSoC](https://github.com/olofk/fusesoc)-compatible pre-built version of IOb-UART16550 is available in the official [FuseSoC Package Directory](https://cores.fusesoc.net/cores/?search=iob_uart16550).
+
+There is also a [FuseSoC](https://github.com/olofk/fusesoc)-compatible pre-built version of IOb-uart16550 available in the [repository's release page](https://github.com/IObundle/iob-uart16550/releases) and in the [iob-uart16550-fs](https://github.com/IObundle/iob-uart16550-fs) repository.
 The core's Verilog sources are available in the `iob_uart16550/hardware/src/` directory of the compressed tar.gz file in the release page.
 
 To use this pre-built core in FuseSoC, extract the compressed tar.gz file to a [FuseSoC library directory](https://fusesoc.readthedocs.io/en/stable/user/overview.html#discover-cores-the-package-manager).
+
+### Signature verification
+
+IObundle core's published for FuseSoC are cryptographically signed by IObundle.
+
+The core's signature can be verified by adding the contents of [IObundle's trustfile](https://github.com/IObundle/py2hwsw/blob/main/py2hwsw/fusesoc_trustfile.pub) to your local fusesoc installation's trustfile.
+More information about FuseSoC core signing and verification can be found in the [FuseSoC documentation](https://fusesoc.readthedocs.io/en/stable/user/build_system/core_files.html#signed-core-files).
 
 ## Funding
 
