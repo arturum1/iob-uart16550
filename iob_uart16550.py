@@ -252,6 +252,17 @@ def setup(py_params_dict):
             },
             {
                 "core_name": "iob_linux_device_drivers",
+                "compatible_str": "ns16550a",
+                # Extra device tree properties specific to this peripheral
+                "dts_extra_properties": r"""
+        clock-frequency = </*FREQ_MACRO*/>; // UART clock frequency
+        current-speed = </*BAUD_MACRO*/>; // Initial baud rate
+        interrupt-parent = < &PLIC0 >; // PLIC phandle (matches PLIC peripheral name in system's DT)
+        interrupts = <1>; // PLIC source ID 1
+        reg-shift = <2>; // 32-bit registers (4-byte stride)
+        reg-io-width = <4>; // 32-bit accesses only
+        status = "okay"; // Enable the node
+""",
             },
         ],
         #
