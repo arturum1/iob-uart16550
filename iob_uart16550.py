@@ -260,9 +260,8 @@ def setup(py_params_dict):
         current-speed = </*BAUD_MACRO*/>; // Initial baud rate
         interrupt-parent = < &PLIC0 >; // PLIC phandle (matches PLIC peripheral name in system's DT)
         interrupts = <{PLIC_SOURCE_ID}>; // PLIC source ID
-        reg-shift = <2>; // 32-bit registers (4-byte stride)
-        reg-io-width = <4>; // 32-bit accesses only
-        status = "okay"; // Enable the node
+        // reg-shift = <0>; // 2**0 = 1‑byte spacing between sequential registers (same as driver default)
+        // reg-io-width = <1>; // 8‑bit reads/writes (same as driver default)
 """,
             },
         ],
