@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2025 IObundle
+
+SPDX-License-Identifier: MIT
+-->
+
 # UART16550, OpenSBI, and Linux Interaction Guide
 
 ## 1. Brief intro to OpenSBI (UART / console context)
